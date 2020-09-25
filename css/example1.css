@@ -1,0 +1,33 @@
+#nineth .box {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: sans-serif;
+}
+
+#nineth .text {
+    margin: 0;
+    padding: 0;
+    font-family: verdana;
+    font-size: 120px;
+    color: #06111c;
+    text-transform: uppercase;
+    position: relative;
+}
+
+#nineth .text:before {
+    content: "text";
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #FCD63F;
+    width: 0%;
+    overflow: hidden;
+    transition: all 0.5s
+}
+
+#nineth .text:hover:before {
+    width: 100%;
+}

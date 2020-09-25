@@ -1,0 +1,163 @@
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #06111c;
+    color: white;
+}
+
+.subtitle {
+    font-size: 60px;
+    font-weight: bold;
+    letter-spacing: 10px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.subtitle2 {
+    font-size: 35px;
+    letter-spacing: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    margin-top: -30px;
+}
+
+.section {
+    display: none;
+    opacity: 0;
+    position: absolute;
+    transform: scale(1) translateY(0px);
+    opacity: 1;
+    filter: blur(0px);
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.collumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    margin: 0 20px;
+}
+
+.animation {
+    height: 200px;
+    display: flex;
+    align-items: center;
+}
+
+p {
+    font-family: sans-serif;
+    width: max-content;
+}
+
+.spacing {
+    height: 20px;
+}
+
+.title {
+    color: white;
+    font-size: 100px;
+    font-weight: bold;
+    letter-spacing: 10px;
+    transition: 2s;
+    position: absolute;
+    transform: scale(1) translateY(0px);
+    opacity: 1;
+    filter: blur(0px);
+}
+
+.underline {
+    font-weight: bold;
+    color: #057AFF;
+}
+
+.code {
+    align-items: baseline;
+    margin: 0 0 0 25px;
+}
+
+.code p {
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.code .selector {
+    margin-left: -15px;
+}
+
+.smoky {
+    animation: smoke 1.5s linear 0s 1 normal both
+}
+
+.smoky-reverse {
+    animation: smoke-reverse 1.5s linear 0s 1 normal both
+}
+
+.fadeup {
+    animation: fadeup 1.5s linear 0s 1 normal both
+}
+
+.fadeup-reverse {
+    animation: fadeup-reverse 1.5s linear 0s 1 normal both
+}
+
+@keyframes smoke {
+    from {
+        transform: scale(1) translateY(0px);
+        opacity: 1;
+        filter: blur(0px);
+    }
+    to {
+        transform: scale(1.2) translateY(-600px);
+        opacity: 0;
+        filter: blur(20px);
+    }
+}
+
+@keyframes smoke-reverse {
+    from {
+        transform: scale(1.2) translateY(-600px);
+        opacity: 0;
+        filter: blur(20px);
+    }
+    to {
+        transform: scale(1) translateY(0px);
+        opacity: 1;
+        filter: blur(0px);
+    }
+}
+
+@keyframes fadeup {
+    from {
+        transform: scale(1.2) translateY(600px);
+        opacity: 0;
+        filter: blur(20px);
+    }
+    to {
+        transform: scale(1) translateY(0px);
+        opacity: 1;
+        filter: blur(0px);
+    }
+}
+
+@keyframes fadeup-reverse {
+    from {
+        transform: scale(1) translateY(0px);
+        opacity: 1;
+        filter: blur(0px);
+    }
+    to {
+        transform: scale(1.2) translateY(600px);
+        opacity: 0;
+        filter: blur(20px);
+    }
+}

@@ -1,0 +1,91 @@
+#animation2 .container {
+    width: 90px;
+    height: 90px;
+    position: relative;
+    animation: animate 1s linear infinite;
+    transform: rotate(45deg);
+}
+
+#animation2 .container span {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    animation: rotate 1s linear infinite
+}
+
+#animation2 .container span:nth-child(1) {
+    top: 0;
+    left: 0;
+    background-color: #FCEBA7;
+}
+
+#animation2 .container span:nth-child(2) {
+    top: 0;
+    right: 0;
+    background-color: #55DDB9;
+}
+
+#animation2 .container span:nth-child(3) {
+    bottom: 0;
+    left: 0;
+    background-color: #FD6C64;
+}
+
+#animation2 .container span:nth-child(4) {
+    bottom: 0;
+    right: 0;
+    background-color: #1F78B0;
+}
+
+#animation2 #with-delay .container span:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+#animation2 #with-delay .container span:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+#animation2 #with-delay .container span:nth-child(4) {
+    animation-delay: 0.2s;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    10% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(90deg);
+    }
+    90% {
+        transform: rotate(90deg);
+    }
+    100% {
+        transform: rotate(90deg);
+    }
+}
+
+@keyframes animate {
+    0% {
+        width: 90px;
+        height: 90px;
+    }
+    10% {
+        width: 90px;
+        height: 90px;
+    }
+    50% {
+        width: 130px;
+        height: 130px;
+    }
+    90% {
+        width: 90px;
+        height: 90px;
+    }
+    100% {
+        width: 90px;
+        height: 90px;
+    }
+}

@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CSS animatin, transitions and transforms</title>
+
+    <!-- Java Script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/add_events.js"></script>
+    <!-- STYLESHEETS -->
+
+    <link
+      rel="stylesheet"
+      href="css/transition1.css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="css/animation1.css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="css/transition2.css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="css/animation2.css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="css/transition3.css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="css/animation3.css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="css/transition4.css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="css/transition5.css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="css/animation4.css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="css/animation5.css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="css/animation6.css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="css/example1.css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="css/example2.css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="css/example3.css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="css/questions.css"
+      type="text/css"
+      media="all"
+    />
+    <link rel="stylesheet" href="css/general.css" type="text/css" media="all" />
+    <!-- font with icons for example 3-->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
+      integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <div class="title" id="main_title">CSS Animations</div>
+
+    <div class="section" id="first">
+      <div class="subtitle">Two types of Animations</div>
+      <div class="row">
+        <div class="collumn">
+          <div class="animation" id="transition1">
+            <ul>
+              <li><a href="#">home</a></li>
+            </ul>
+          </div>
+          <p>transition: all 2s linear 0s</p>
+        </div>
+        <div class="collumn">
+          <div class="animation" id="animation1">
+            <div class="container">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <p>animation: animate 4s linear 0s infinite normal none</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" id="second">
+      <div class="subtitle">Key elements</div>
+      <div class="subtitle2">Timing</div>
+      <div class="row">
+        <div class="collumn">
+          <div class="row" id="transition2">
+            <div class="collumn">
+              <div class="animation" id="no-time">
+                <ul>
+                  <li><a href="#">home</a></li>
+                </ul>
+              </div>
+              <p>transition: all <span class="underline">0s</span> linear 0s</p>
+            </div>
+            <div class="collumn">
+              <div class="animation">
+                <ul>
+                  <li><a href="#">home</a></li>
+                </ul>
+              </div>
+              <p>
+                transition: all <span class="underline">0.5s</span> linear 0s
+              </p>
+            </div>
+          </div>
+          <p>Duration</p>
+        </div>
+        <div class="collumn">
+          <div class="row" id="animation2">
+            <div class="collumn">
+              <div class="animation">
+                <div class="container">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+              <p>
+                animation: rotate 1s linear infinite
+                <span class="underline">0s</span>
+              </p>
+            </div>
+            <div class="collumn">
+              <div class="animation" id="with-delay">
+                <div class="container">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+              <p>
+                animation: rotate 1s linear infinite
+                <span class="underline">0.1s</span>
+              </p>
+            </div>
+          </div>
+          <p>Delay</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" id="third">
+      <div class="subtitle">Key elements</div>
+      <div class="subtitle2">Inner components</div>
+      <div class="row">
+        <div class="collumn">
+          <div class="animation" id="transition3">
+            <ul>
+              <li><a href="#">home</a></li>
+            </ul>
+          </div>
+          <p>< a href="#" > home < / a ></p>
+        </div>
+        <div class="collumn code">
+          <p class="selector">a:before {</p>
+          <p><span class="underline">content: " " ;</span></p>
+          <p>position: absolute;</p>
+          <p>opacity: 0;</p>
+          <p>border-width: 0 0 3px 3px;</p>
+          <p>transition: all 0.3s</p>
+          <p class="selector">... }</p>
+          <p class="spacing"></p>
+          <p class="selector">a:hover:before {</p>
+          <p>opacity: 1;</p>
+          <p>bottom: -8px;</p>
+          <p>left: -8px;</p>
+          <p class="selector">}</p>
+        </div>
+        <div class="collumn" id="animation3">
+          <div class="animation">
+            <div class="container">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <div class="code">
+            <p>< div class="container" ></p>
+            <p>< span >< / span ></p>
+            <p>< span >< / span ></p>
+            <p>< span >< / span ></p>
+            <p>< span >< / span ></p>
+            <p>< / div ></p>
+          </div>
+        </div>
+        <div class="collumn code">
+          <p class="selector">span {</p>
+          <p>animation: rotate 1s linear infinite</p>
+          <p class="selector">... }</p>
+          <p class="spacing"></p>
+          <p class="selector">.container {</p>
+          <p>animation: animate 1s linear infinite;</p>
+          <p class="selector">... }</p>
+          <p class="spacing"></p>
+          <p class="selector">.container span:nth-child(1) {</p>
+          <p>top: 0;</p>
+          <p>left: 0;</p>
+          <p>background-color: #FCEBA7;</p>
+          <p class="selector">}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" id="fourth">
+      <div class="subtitle">
+        Transitions
+      </div>
+      <div class="subtitle2">
+        transition: all 0.5s linear 0.5s;
+      </div>
+      <div class="row" id="transition4">
+        <div class="collumn">
+          <div class="animation">
+            <ul>
+              <li><a href="#">home</a></li>
+            </ul>
+          </div>
+          <p>resting / before state</p>
+        </div>
+        <div class="collumn">
+          <div class="animation" id="after">
+            <ul>
+              <li><a href="#">home</a></li>
+            </ul>
+          </div>
+          <p>active / after state</p>
+        </div>
+        <div class="collumn code">
+          <p class="selector">a {</p>
+          <p>color: #FCD63F;</p>
+          <p>font-size: 35px;</p>
+          <p class="selector">... }</p>
+          <p class="spacing"></p>
+          <p class="selector">a:hover {</p>
+          <p>background-color: #FCD63F;</p>
+          <p>color: #06111c;</p>
+          <p class="selector">}</p>
+        </div>
+        <div class="collumn">
+          <div class="animation" id="static">
+            <ul>
+              <li><a href="#">home</a></li>
+            </ul>
+          </div>
+          <p>Instant change</p>
+        </div>
+        <div class="collumn code">
+          <p>transition-property: all;</p>
+          <p>transition-duration: 0.5s;</p>
+          <p>transition-timing-function: linear;</p>
+          <p>transition-delay: 0.5s;</p>
+        </div>
+        <div class="collumn">
+          <div class="animation" id="animated">
+            <ul>
+              <li><a href="#">home</a></li>
+            </ul>
+          </div>
+          <p>With transition defined</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" id="fifth">
+      <div class="subtitle">
+        Transitions
+      </div>
+      <div class="subtitle2">
+        transition-timing-function
+      </div>
+      <div class="row" id="transition5">
+        <div class="collumn">
+          <div class="animation">
+            <div class="graphic">
+              <div class="block" id="linear"></div>
+            </div>
+          </div>
+          <p>linear</p>
+        </div>
+        <div class="collumn">
+          <div class="animation">
+            <div class="graphic">
+              <div class="block" id="ease"></div>
+            </div>
+          </div>
+          <p>ease</p>
+        </div>
+        <div class="collumn">
+          <div class="animation">
+            <div class="graphic">
+              <div class="block" id="ease-in"></div>
+            </div>
+          </div>
+          <p>ease-in</p>
+        </div>
+        <div class="collumn">
+          <div class="animation">
+            <div class="graphic">
+              <div class="block" id="ease-out"></div>
+            </div>
+          </div>
+          <p>ease-out</p>
+        </div>
+        <div class="collumn">
+          <div class="animation">
+            <div class="graphic">
+              <div class="block" id="ease-in-out"></div>
+            </div>
+          </div>
+          <p>ease-in-out</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" id="sixth">
+      <div class="subtitle">
+        Animations
+      </div>
+      <div class="subtitle2">
+        animation: animate 1s linear 0s infinite normal;
+      </div>
+      <div class="row" id="animation4">
+        <div class="collumn code">
+          <p class="selector">@keyframes rotate {</p>
+          <p>0% {transform: rotate(0deg);}</p>
+          <p>10% {transform: rotate(0deg);}</p>
+          <p>50% {transform: rotate(90deg);}</p>
+          <p>90% {transform: rotate(90deg);}</p>
+          <p>100% {transform: rotate(90deg);}</p>
+          <p class="selector">}</p>
+          <p class="spacing"></p>
+          <p class="selector">@keyframes animate {</p>
+          <p>0% {width: 90px; height: 90px;}</p>
+          <p>10% {width: 90px; height: 90px;}</p>
+          <p>50% {width: 130px; height: 130px;}</p>
+          <p>90% {width: 90px; height: 90px;}</p>
+          <p>100% {width: 90px; height: 90px;}</p>
+          <p class="selector">}</p>
+        </div>
+        <div class="collumn">
+          <div class="animation">
+            <div class="fixed-container"></div>
+            <span></span>
+          </div>
+          <p>one span</p>
+        </div>
+        <div class="collumn">
+          <div class="animation">
+            <div class="container" id="just-container"></div>
+          </div>
+          <p>just the container</p>
+        </div>
+        <div class="collumn code">
+          <p>animation-name: animate;</p>
+          <p>animation-duration: 1s;</p>
+          <p>animation-timing-function: linear;</p>
+          <p>animation-delay: 0s;</p>
+          <p>animation-iteration-count: infinite;</p>
+          <p>animation-direction: normal;</p>
+          <p>animation-fill-mode: normal;</p>
+        </div>
+        <div class="collumn">
+          <div class="animation">
+            <div class="container">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <p>full animation</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" id="seventh">
+      <div class="subtitle">
+        Animations
+      </div>
+      <div class="subtitle2">
+        animation-direction
+      </div>
+      <div class="row" id="animation5">
+        <div class="collumn">
+          <div class="animation">
+            <div class="graphic">
+              <div class="block" id="normal"></div>
+            </div>
+          </div>
+          <p>normal</p>
+        </div>
+        <div class="collumn">
+          <div class="animation">
+            <div class="graphic">
+              <div class="block" id="reverse"></div>
+            </div>
+          </div>
+          <p>reverse</p>
+        </div>
+        <div class="collumn">
+          <div class="animation">
+            <div class="graphic">
+              <div class="block" id="alternate"></div>
+            </div>
+          </div>
+          <p>alternate</p>
+        </div>
+        <div class="collumn">
+          <div class="animation">
+            <div class="graphic">
+              <div class="block" id="alternate-reverse"></div>
+            </div>
+          </div>
+          <p>alternate-reverse</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" id="eighth">
+      <div class="subtitle">
+        Animations
+      </div>
+      <div class="subtitle2">
+        animation-fill-mode
+      </div>
+      <div class="row" id="animation6">
+        <div class="collumn">
+          <div class="animation">
+            <div class="graphic">
+              <div class="block" id="one"></div>
+            </div>
+          </div>
+          <p>none</p>
+        </div>
+        <div class="collumn">
+          <div class="animation">
+            <div class="graphic">
+              <div class="block" id="two"></div>
+            </div>
+          </div>
+          <p>forwards</p>
+        </div>
+        <div class="collumn">
+          <div class="animation">
+            <div class="graphic">
+              <div class="block" id="three"></div>
+            </div>
+          </div>
+          <p>backwards</p>
+        </div>
+        <div class="collumn">
+          <div class="animation">
+            <div class="graphic">
+              <div class="block" id="four"></div>
+            </div>
+          </div>
+          <p>both</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" id="nineth">
+      <div class="box"><div class="text">text</div></div>
+    </div>
+
+    <div class="section" id="tenth">
+      <div class="box">
+        <div class="loading"></div>
+      </div>
+    </div>
+
+    <div class="section" id="eleventh">
+      <div class="box">
+        <ul>
+          <li><i class="fas fa-heart"></i></li>
+          <li><i class="fas fa-glass-martini"></i></li>
+          <li><i class="fas fa-globe"></i></li>
+          <li><i class="fas fa-gift"></i></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section" id="questions">
+      <div class="box">
+        <div class="container">
+          <div class="square">?</div>
+          <div class="square">?</div>
+          <div class="square">?</div>
+          <div class="square">?</div>
+          <div class="square">?</div>
+          <div class="square">?</div>
+          <div class="square">?</div>
+          <div class="square">?</div>
+          <div class="square">?</div>
+          <div class="square">?</div>
+          <div class="text">
+            <ul>
+              <li>Q</li>
+              <li>U</li>
+              <li>E</li>
+              <li>S</li>
+              <li>T</li>
+              <li>I</li>
+              <li>O</li>
+              <li>N</li>
+              <li>S</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

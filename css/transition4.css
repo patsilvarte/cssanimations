@@ -1,0 +1,69 @@
+#transition4 ul {
+    padding: 0;
+    display: flex;
+    list-style-type: none;
+    font-family: sans-serif;
+}
+
+#transition4 ul li a {
+    color: #FCD63F;
+    font-size: 35px;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    margin: 0px 10px;
+    position: relative;
+}
+
+#transition4 #animated ul li a {
+    transition: all 0.5s;
+}
+
+#transition4 #after a, #transition4 #static a:hover, #transition4 #animated a:hover {
+    background-color: #FCD63F;
+    color: #06111c;
+}
+
+#transition4 a:before {
+    content: "";
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    width: 12px;
+    height: 12px;
+    border: 3px solid #FCD63F;
+    border-width: 0 0 3px 3px;
+    opacity: 0;
+}
+
+#transition4 #animated a:before {
+    transition: all 0.3s;
+}
+
+#transition4 #after a:before, #transition4 #static a:hover:before, #transition4 #animated a:hover:before {
+    opacity: 1;
+    bottom: -8px;
+    left: -8px;
+}
+
+#transition4 a:after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 12px;
+    height: 12px;
+    border: 3px solid #FCD63F;
+    border-width: 3px 3px 0 0;
+    opacity: 0;
+}
+
+#transition4 #animated a:after {
+    transition: all 0.3s;
+}
+
+#transition4 #after a:after, #transition4 #static a:hover:after, #transition4 #animated a:hover:after {
+    opacity: 1;
+    top: -8px;
+    right: -8px;
+}
